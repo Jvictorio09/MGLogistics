@@ -1,4 +1,1063 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<main>
+    <!-- search-popup -->
+    <div class="modal fade bs-example-modal-lg search-bg popup1" role="dialog" tabindex="-1">
+     <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content search-popup">
+       <div class="text-center">
+        <a aria-label="Close" class="close2" data-dismiss="modal" href="#">
+         × close
+        </a>
+       </div>
+       <div class="row search-outer">
+        <div class="col-md-11">
+         <input placeholder="Search for products..." type="text"/>
+        </div>
+        <div class="col-md-1 text-right">
+         <a href="#">
+          <i aria-hidden="true" class="fa fa-search">
+          </i>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- /search-popup -->
+    <!-- slider-area -->
+    <section class="slider-area slider-four fix p-relative" id="home">
+        <div class="slider-active">
+          <div class="single-slider slider-bg d-flex align-items-center"
+            style="background: url('{% static "img/slider/slider_img_bg.png" %}') no-repeat; background-size: cover; background-position: center center;">
+            <div class="container">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-lg-7 col-md-7">
+                  <div class="slider-content s-slider-content mb-25">
+                    <h5 data-animation="fadeInDown" data-delay=".4s">
+                      Dependable. Efficient. Nationwide.
+                    </h5>
+                    <h2 data-animation="fadeInUp" data-delay=".4s">
+                      Your Trusted Partner in Logistics and Trucking
+                    </h2>
+                    <p data-animation="fadeInUp" data-delay=".6s">
+                      From local deliveries to international cargo forwarding, Malcolm Global Logistics delivers tailored logistics solutions you can rely on — on time, every time.
+                    </p>
+                    <div class="slider-btn mt-30">
+                      <a class="btn ss-btn mr-15" href="#">
+                        Learn More
+                      </a>
+                      <a class="btn ss-btn active mr-15" href="#">
+                        Get a Quote
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-5 col-md-5">
+                  <a class="video-i popup-video" href="https://www.youtube.com/watch?v=2xc9YKdlLW0">
+                    <img alt="slider_img05" src="{% static 'img/icon/play-header.png' %}" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- slider-area-end -->
+    <!-- features-area -->
+    <section class="features-services-area about-p p-relative" id="features-services">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-12">
+              <div class="features-box mb-30">
+                <div class="features-icon">
+                  <img alt="img" src="{% static 'img/icon/se-icon1.png' %}" />
+                </div>
+                <div class="features-content">
+                  <h4>
+                    <a href="#">
+                      Warehousing Services
+                    </a>
+                  </h4>
+                  <p>
+                    Secure and scalable storage solutions for your goods, with flexible options for both short-term and long-term needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-12">
+              <div class="features-box mb-30">
+                <div class="features-icon">
+                  <img alt="img" src="{% static 'img/icon/se-icon2.png' %}" />
+                </div>
+                <div class="features-content">
+                  <h4>
+                    <a href="#">
+                      Trucking & Delivery
+                    </a>
+                  </h4>
+                  <p>
+                    Reliable, on-time local and regional trucking services tailored for cargo of any size or urgency.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-12">
+              <div class="features-box mb-30">
+                <div class="features-icon">
+                  <img alt="img" src="{% static 'img/icon/se-icon3.png' %}" />
+                </div>
+                <div class="features-content">
+                  <h4>
+                    <a href="#">
+                      Freight Forwarding
+                    </a>
+                  </h4>
+                  <p>
+                    Seamless coordination of your cargo—whether by land or sea—with full logistics support from pickup to final delivery.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-12">
+              <div class="features-box mb-30">
+                <div class="features-icon">
+                  <img alt="img" src="{% static 'img/icon/se-icon4.png' %}" />
+                </div>
+                <div class="features-content">
+                  <h4>
+                    <a href="#">
+                      Customs Clearance
+                    </a>
+                  </h4>
+                  <p>
+                    Hassle-free documentation and compliance for international shipments, handled by our experienced clearance team.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- features-area-end -->
+    <!-- about-area -->
+    <section class="about-area about-p pt-120 pb-120 p-relative" id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+              <div class="s-about-img p-relative wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+                <img alt="img" src="{% static 'img/features/about_img.png' %}" />
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+              <div class="about-content s-about-content wow fadeInRight animated" data-animation="fadeInRight" data-delay=".4s">
+                <div class="about-title second-title pb-25">
+                  <h5>
+                    <span class="line">
+                      <img alt="circle_right" src="{% static 'img/bg/circle_right.png' %}" />
+                    </span>
+                    About Us
+                  </h5>
+                  <h2>
+                    Driving Logistics Forward with Trust and Precision
+                  </h2>
+                </div>
+                <p>
+                  Malcolm Global Logistics & Trucking Services is a proudly local logistics provider offering smart, scalable, and safe cargo solutions across the Philippines. We specialize in trucking, freight forwarding, and warehousing — delivering every shipment with care, professionalism, and commitment to deadlines.
+                </p>
+                <ul class="mt-30 mb-30">
+                  <li>
+                    <div class="icon">
+                      <i class="fal fa-check"></i>
+                    </div>
+                    <div class="text">
+                      <p>
+                        End-to-end logistics tailored to your business needs
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <i class="fal fa-check"></i>
+                    </div>
+                    <div class="text">
+                      <p>
+                        Professional team trained in safe and efficient cargo handling
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <i class="fal fa-check"></i>
+                    </div>
+                    <div class="text">
+                      <p>
+                        Transparent operations with real-time support and communication
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="slider-btn">
+                  <a class="btn ss-btn" href="#">
+                    Learn More
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- about-area-end -->
+    <!-- services-area -->
+    <section class="services-area2 pt-120 pb-90 fix" id="services-area2"
+  style="background: url('{% static "img/bg/service-bg.png" %}') no-repeat; background-size: cover;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title center-align mb-50 text-center">
+          <h5>
+            <span class="line2">
+              <img alt="circle_right" src="{% static 'img/bg/circle_right.png' %}" />
+            </span>
+            Our Services
+            <span class="line3">
+              <img alt="circle_left" src="{% static 'img/bg/circle_right.png' %}" />
+            </span>
+          </h5>
+          <h2>
+            Tailored Logistics Solutions That Move You Forward
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="row home-blog-active">
+      <div class="col-lg-4 col-md-12">
+        <div class="services-box2 mb-30">
+          <div class="services-img">
+            <img alt="circle_right" src="{% static 'img/services/services-img1.png' %}" />
+          </div>
+          <div class="services-content2">
+            <h3>
+              <a href="#">
+                Freight Forwarding
+                <br />
+                Services
+              </a>
+            </h3>
+            <a class="icon" href="#">
+              <i class="fal fa-angle-double-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="services-box2 mb-30">
+          <div class="services-img">
+            <img alt="circle_right" src="{% static 'img/services/services-img2.png' %}" />
+          </div>
+          <div class="services-content2">
+            <h3>
+              <a href="#">
+                Trucking &
+                <br />
+                Delivery
+              </a>
+            </h3>
+            <a class="icon" href="#">
+              <i class="fal fa-angle-double-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="services-box2 mb-30">
+          <div class="services-img">
+            <img alt="circle_right" src="{% static 'img/services/services-img3.png' %}" />
+          </div>
+          <div class="services-content2">
+            <h3>
+              <a href="#">
+                Warehousing
+                <br />
+                Solutions
+              </a>
+            </h3>
+            <a class="icon" href="#">
+              <i class="fal fa-angle-double-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="services-box2 mb-30">
+          <div class="services-img">
+            <img alt="circle_right" src="{% static 'img/services/services-img2.png' %}" />
+          </div>
+          <div class="services-content2">
+            <h3>
+              <a href="#">
+                Customs
+                <br />
+                Clearance
+              </a>
+            </h3>
+            <a class="icon" href="#">
+              <i class="fal fa-angle-double-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-
-
-Hello World!
+    <!-- services-area-end -->
+    <!-- booking-area -->
+    <section class="booking-area contact-bg pt-120 pb-120 p-relative fix" id="booking"
+    style="background: url('{% static 'img/bg/booking-bg.png' %}') no-repeat; background-size: cover;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 col-md-12">
+          <div class="booking-content-box">
+            <div class="section-title second-title pb-25">
+              <h5>
+                <span class="line">
+                  <img alt="circle_right" src="{% static 'img/bg/circle_left_w.png' %}" />
+                </span>
+                Request A Quote
+              </h5>
+              <h2>
+                Book Your Cargo with Malcolm Global Logistics
+              </h2>
+            </div>
+            <p>
+              Ready to move your cargo? Fill out the form and our team will get back to you with a personalized logistics solution tailored to your needs.
+            </p>
+            <a href="#">
+              GET IN TOUCH
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="booking-contact-box">
+            <ul class="nav nav-tabs">
+              <li class="active">
+                <a data-toggle="tab" href="#home3">
+                  Request A Quote
+                </a>
+              </li>
+              <li>
+                <a data-toggle="tab" href="#menu1">
+                  Track &amp; Trace
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="home3">
+                <form action="mail.php" class="contact-form mt-30" method="post">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="contact-field p-relative c-name mb-30">
+                        <input class="form-control" id="firstn" name="firstn" placeholder="Full Name" required="" type="text" />
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="contact-field p-relative c-subject mb-30">
+                        <input class="form-control" id="email" name="email" placeholder="Email Address" required="" type="email" />
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="contact-field p-relative c-subject mb-30">
+                        <input class="form-control" id="phone" name="phone" placeholder="Contact Number" required="" type="text" />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="contact-field p-relative c-option mb-30">
+                        <select class="form-control" id="sr" name="departure">
+                          <option value="" disabled selected>Pickup Location</option>
+                          <option>Antipolo</option>
+                          <option>Pasig</option>
+                          <option>Manila</option>
+                          <option>Quezon City</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="contact-field p-relative c-option mb-30">
+                        <select class="form-control" id="dr" name="delivery">
+                          <option value="" disabled selected>Drop-off Location</option>
+                          <option>Batangas</option>
+                          <option>Cavite</option>
+                          <option>Laguna</option>
+                          <option>Pampanga</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="contact-field p-relative c-option mb-30">
+                        <select class="form-control" id="wd" name="width">
+                          <option value="" disabled selected>Width (cm)</option>
+                          <option>30</option>
+                          <option>40</option>
+                          <option>50</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="contact-field p-relative c-option mb-30">
+                        <select class="form-control" id="ht" name="height">
+                          <option value="" disabled selected>Height (cm)</option>
+                          <option>10</option>
+                          <option>20</option>
+                          <option>30</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="slider-btn">
+                        <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">
+                          Submit Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="menu1">
+                <form action="mail.php" class="contact-form mt-30" method="post">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="contact-field p-relative c-message mb-30">
+                        <textarea cols="30" id="message" name="message" placeholder="Enter your tracking number here" rows="10"></textarea>
+                      </div>
+                      <div class="slider-btn">
+                        <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">
+                          Track Package
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <!-- booking-area-end -->
+    <!-- skill-area -->
+    <section class="skill-area pt-120 pb-240 p-relative" id="skill"
+    style="background: url('{% static 'img/bg/service-bg.png' %}') no-repeat;background-size: cover;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 pr-30">
+          <div class="skills-content s-about-content">
+            <div class="skills">
+              <div class="skill mb-50">
+                <div class="skill-name">
+                  Freight Forwarding
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-per" id="95"></div>
+                </div>
+              </div>
+              <div class="skill mb-50">
+                <div class="skill-name">
+                  Local Trucking
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-per" id="90"></div>
+                </div>
+              </div>
+              <div class="skill mb-50">
+                <div class="skill-name">
+                  Warehousing Solutions
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-per" id="85"></div>
+                </div>
+              </div>
+              <div class="skill mb-50">
+                <div class="skill-name">
+                  Customs Clearance
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-per" id="80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <div class="skills-content s-about-content">
+            <div class="skills-title pb-20">
+              <h5>
+                <span class="line">
+                  <img alt="circle_right" src="{% static 'img/bg/circle_right.png' %}" />
+                </span>
+                Our Skills
+              </h5>
+              <h2>
+                Experience That Delivers Beyond Expectations
+              </h2>
+            </div>
+            <p>
+              With years of industry experience and a team of logistics experts, we pride ourselves on delivering precise, on-time, and cost-effective solutions. From trucking and warehousing to customs and forwarding, Malcolm Global moves with purpose and professionalism.
+            </p>
+            <div class="slider-btn mt-15">
+              <a class="btn ss-btn" href="#">
+                Make Appointment
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <!-- skill-area-end -->
+    <!-- video-area -->
+    <section class="video-area p-relative" id="video">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="s-video-wrap" style="background-image:url('{% static 'img/bg/video-img.png' %}')">
+                <div class="s-video-content">
+                  <h6>
+                    <a class="popup-video mb-50" href="https://www.youtube.com/watch?v=7e90gBu4pas">
+                      <img alt="circle_right" src="{% static 'img/bg/play-button.png' %}" />
+                    </a>
+                  </h6>
+                  <p class="text-white text-center mt-3">
+                    Watch how Malcolm Global keeps logistics moving with speed, safety, and precision.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- video-area-end -->
+    <!-- counter-area -->
+    <div class="counter-area p-relative pb-90" style="background-image:url('{% static 'img/bg/counter-bg.png' %}')">
+        <div class="container">
+          <div class="row p-relative">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
+                <div class="icon">
+                  <img alt="img" src="{% static 'img/icon/cn-iocn01.png' %}" />
+                </div>
+                <div class="counter p-relative">
+                  <span class="count">
+                    12000
+                  </span>
+                  <small>+</small>
+                  <p>Successful Deliveries</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".3s">
+                <div class="icon">
+                  <img alt="img" src="{% static 'img/icon/cn-iocn02.png' %}" />
+                </div>
+                <div class="counter p-relative">
+                  <span class="count">
+                    10
+                  </span>
+                  <small>+</small>
+                  <p>Years in Logistics</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".4s">
+                <div class="icon">
+                  <img alt="img" src="{% static 'img/icon/cn-iocn03.png' %}" />
+                </div>
+                <div class="counter p-relative">
+                  <span class="count">
+                    120
+                  </span>
+                  <small>+</small>
+                  <p>Partnered Businesses</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".5s">
+                <div class="icon">
+                  <img alt="img" src="{% static 'img/icon/cn-iocn04.png' %}" />
+                </div>
+                <div class="counter p-relative">
+                  <span class="count">
+                    100
+                  </span>
+                  <small>+</small>
+                  <p>Dedicated Team Members</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <!-- counter-area-end -->
+    <!-- team-area -->
+    <section class="team-area2 pt-120 pb-90" id="team">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 p-relative">
+              <div class="section-title center-align mb-50 text-center">
+                <h5>
+                  <span class="line2">
+                    <img alt="circle_right" src="{% static 'img/bg/circle_right.png' %}" />
+                  </span>
+                  Our Team
+                  <span class="line3">
+                    <img alt="circle_left" src="{% static 'img/bg/circle_right.png' %}" />
+                  </span>
+                </h5>
+                <h2>
+                  The People Behind the Precision
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="row home-blog-active2">
+            <div class="col-lg-4 col-md-6">
+              <div class="single-team mb-30">
+                <div class="team-thumb p-relative">
+                  <div class="brd">
+                    <img alt="img" src="{% static 'img/team/team_img01.png' %}" />
+                  </div>
+                  <div class="dropdown">
+                    <a class="xbtn" data-toggle="dropdown" href="#">+</a>
+                    <div class="dropdown-menu">
+                      <div class="team-social mt-15">
+                        <ul>
+                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="team-info">
+                  <div class="text">
+                    <h4><a href="#">Mark Villanueva</a></h4>
+                    <span>Operations Manager</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-lg-4 col-md-6">
+              <div class="single-team mb-30">
+                <div class="team-thumb p-relative">
+                  <div class="brd">
+                    <img alt="img" src="{% static 'img/team/team_img02.png' %}" />
+                  </div>
+                  <div class="dropdown">
+                    <a class="xbtn" data-toggle="dropdown" href="#">+</a>
+                    <div class="dropdown-menu">
+                      <div class="team-social mt-15">
+                        <ul>
+                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="team-info">
+                  <div class="text">
+                    <h4><a href="#">Clarisse Domingo</a></h4>
+                    <span>Logistics Coordinator</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-lg-4 col-md-6">
+              <div class="single-team mb-30">
+                <div class="team-thumb p-relative">
+                  <div class="brd">
+                    <img alt="img" src="{% static 'img/team/team_img03.png' %}" />
+                  </div>
+                  <div class="dropdown">
+                    <a class="xbtn" data-toggle="dropdown" href="#">+</a>
+                    <div class="dropdown-menu">
+                      <div class="team-social mt-15">
+                        <ul>
+                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="team-info">
+                  <div class="text">
+                    <h4><a href="#">Leo Ramirez</a></h4>
+                    <span>Fleet Supervisor</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-lg-4 col-md-6">
+              <div class="single-team mb-30">
+                <div class="team-thumb p-relative">
+                  <div class="brd">
+                    <img alt="img" src="{% static 'img/team/team_img06.png' %}" />
+                  </div>
+                  <div class="dropdown">
+                    <a class="xbtn" data-toggle="dropdown" href="#">+</a>
+                    <div class="dropdown-menu">
+                      <div class="team-social mt-15">
+                        <ul>
+                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="team-info">
+                  <div class="text">
+                    <h4><a href="#">Joanna Morales</a></h4>
+                    <span>Customer Relations Head</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-lg-4 col-md-6">
+              <div class="single-team mb-30">
+                <div class="team-thumb p-relative">
+                  <div class="brd">
+                    <img alt="img" src="{% static 'img/team/team_img08.png' %}" />
+                  </div>
+                  <div class="dropdown">
+                    <a class="xbtn" data-toggle="dropdown" href="#">+</a>
+                    <div class="dropdown-menu">
+                      <div class="team-social mt-15">
+                        <ul>
+                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="team-info">
+                  <div class="text">
+                    <h4><a href="#">Carlo Mendoza</a></h4>
+                    <span>Head of Dispatch</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+    <!-- team-area-end -->
+    <!-- testimonial-area -->
+    <section class="testimonial-area pt-120 pb-90" style="background: url('{% static 'img/bg/service-bg.png' %}') no-repeat;background-size: cover;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title center-align mb-50 text-center">
+                <h5>
+                  <span class="line2">
+                    <img alt="circle_right" src="{% static 'img/bg/circle_right.png' %}" />
+                  </span>
+                  Feedback
+                  <span class="line3">
+                    <img alt="circle_left" src="{% static 'img/bg/circle_right.png' %}" />
+                  </span>
+                </h5>
+                <h2>
+                  What Our Clients Say
+                </h2>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="testimonial-active">
+                <div class="single-testimonial">
+                  <p>
+                    “We’ve worked with several logistics companies before, but Malcolm Global delivers like no other. From our warehouse to our customers — seamless, professional, and always on time.”
+                  </p>
+                  <div class="testi-author">
+                    <img alt="img" src="{% static 'img/testimonial/testi_avatar.png' %}" />
+                    <div class="ta-info">
+                      <h6>Angela Reyes</h6>
+                      <span>Operations Manager, LocalMart PH</span>
+                    </div>
+                  </div>
+                  <div class="qt-img">
+                    <img alt="img" src="{% static 'img/testimonial/qt-icon.png' %}" />
+                  </div>
+                </div>
+      
+                <div class="single-testimonial">
+                  <p>
+                    “They handled our freight forwarding and customs clearance from start to finish — stress-free. I highly recommend Malcolm Global for growing businesses.”
+                  </p>
+                  <div class="testi-author">
+                    <img alt="img" src="{% static 'img/testimonial/testi_avatar.png' %}" />
+                    <div class="ta-info">
+                      <h6>Mark Tolentino</h6>
+                      <span>Founder, Pacific Home Furnishings</span>
+                    </div>
+                  </div>
+                  <div class="qt-img">
+                    <img alt="img" src="{% static 'img/testimonial/qt-icon.png' %}" />
+                  </div>
+                </div>
+      
+                <div class="single-testimonial">
+                  <p>
+                    “As an eCommerce business, reliable delivery is everything — and Malcolm Global never fails. Their warehousing and dispatch services are a game changer for us.”
+                  </p>
+                  <div class="testi-author">
+                    <img alt="img" src="{% static 'img/testimonial/testi_avatar.png' %}" />
+                    <div class="ta-info">
+                      <h6>Bianca De Leon</h6>
+                      <span>Owner, ShopSmart Manila</span>
+                    </div>
+                  </div>
+                  <div class="qt-img">
+                    <img alt="img" src="{% static 'img/testimonial/qt-icon.png' %}" />
+                  </div>
+                </div>
+      
+                <div class="single-testimonial">
+                  <p>
+                    “What sets them apart is their communication. We always know where our cargo is. Malcolm Global truly understands the needs of businesses like ours.”
+                  </p>
+                  <div class="testi-author">
+                    <img alt="img" src="{% static 'img/testimonial/testi_avatar.png' %}" />
+                    <div class="ta-info">
+                      <h6>Jerome Santos</h6>
+                      <span>Logistics Lead, Zento Electrical Supply</span>
+                    </div>
+                  </div>
+                  <div class="qt-img">
+                    <img alt="img" src="{% static 'img/testimonial/qt-icon.png' %}" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- testimonial-area-end -->
+    <!-- blog-area -->
+    <section class="blog-area p-relative pt-120 pb-90 fix" id="blog">
+     <div class="container">
+      <div class="row align-items-center">
+       <div class="col-lg-12">
+        <div class="section-title center-align mb-50 text-center">
+         <h5>
+          <span class="line2">
+           <img alt="circle_right" src="{% static 'img/bg/circle_right.png' %}"/>
+          </span>
+          Our blog
+          <span class="line3">
+           <img alt="circle_left" src="{% static 'img/bg/circle_right.png' %}"/>
+          </span>
+         </h5>
+         <h2>
+          Latest News Feed
+         </h2>
+        </div>
+       </div>
+      </div>
+      <div class="row">
+       <div class="col-lg-4 col-md-12">
+        <div class="single-post2 mb-30">
+         <div class="blog-thumb2">
+          <a href="#">
+           <img alt="img" src="{% static 'img/blog/inner_b1.jpg' %}"/>
+          </a>
+         </div>
+         <div class="blog-content2">
+          <div class="b-meta">
+           <div class="row">
+            <div class="col-lg-12 col-md-12">
+             <div class="meta-info">
+              <ul>
+               <li>
+                <i class="fal fa-user">
+                </i>
+                Admin
+               </li>
+               <li>
+                <i class="fal fa-calendar-alt">
+                </i>
+                24th March 2021
+               </li>
+              </ul>
+             </div>
+            </div>
+           </div>
+          </div>
+          <h4>
+           <a href="#">
+            Nunc rutrum molestie urna, quis convallis sapien vel.
+           </a>
+          </h4>
+          <p>
+           Cras ultrices maximus arcu ut aqam. Aliquam daber a diam.
+          </p>
+          <div class="blog-btn">
+           <a href="#">
+            Read More
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="col-lg-4 col-md-12">
+        <div class="single-post2 mb-30">
+         <div class="blog-thumb2">
+          <a href="#">
+           <img alt="img" src="{% static 'img/blog/inner_b2.jpg' %}"/>
+          </a>
+         </div>
+         <div class="blog-content2">
+          <div class="b-meta">
+           <div class="meta-info">
+            <ul>
+             <li>
+              <i class="fal fa-user">
+              </i>
+              Admin
+             </li>
+             <li>
+              <i class="fal fa-calendar-alt">
+              </i>
+              24th March 2021
+             </li>
+            </ul>
+           </div>
+          </div>
+          <h4>
+           <a href="#">
+            Vivamus sodales rutrum erat non malesuada.
+           </a>
+          </h4>
+          <p>
+           Cras ultrices maximus arcu ut aqam. Aliquam daber a diam.
+          </p>
+          <div class="blog-btn">
+           <a href="#">
+            Read More
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="col-lg-4 col-md-12">
+        <div class="single-post2 mb-30">
+         <div class="blog-thumb2">
+          <a href="#">
+           <img alt="img" src="{% static 'img/blog/inner_b3.jpg' %}"/>
+          </a>
+         </div>
+         <div class="blog-content2">
+          <div class="b-meta">
+           <div class="meta-info">
+            <ul>
+             <li>
+              <i class="fal fa-user">
+              </i>
+              Admin
+             </li>
+             <li>
+              <i class="fal fa-calendar-alt">
+              </i>
+              24th March 2021
+             </li>
+            </ul>
+           </div>
+          </div>
+          <h4>
+           <a href="#">
+            Fusce suscipit arcu velit id scelerisque tempus est
+           </a>
+          </h4>
+          <p>
+           Cras ultrices maximus arcu ut aqam. Aliquam daber a diam.
+          </p>
+          <div class="blog-btn">
+           <a href="#">
+            Read More
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- blog-area-end -->
+    <!-- brand-area -->
+    <div class="brand-area pt-60 pb-60" style="background: url('{% static 'img/bg/service-bg.png' %}') no-repeat;background-size: cover;">
+     <div class="container">
+      <div class="row brand-active">
+       <div class="col-xl-2">
+        <div class="single-brand">
+         <img alt="img" src="{% static 'img/brand/b-logo1.png' %}"/>
+        </div>
+       </div>
+       <div class="col-xl-2">
+        <div class="single-brand">
+         <img alt="img" src="{% static 'img/brand/b-logo2.png' %}"/>
+        </div>
+       </div>
+       <div class="col-xl-2">
+        <div class="single-brand">
+         <img alt="img" src="{% static 'img/brand/b-logo3.png' %}"/>
+        </div>
+       </div>
+       <div class="col-xl-2">
+        <div class="single-brand">
+         <img alt="img" src="{% static 'img/brand/b-logo4.png' %}"/>
+        </div>
+       </div>
+       <div class="col-xl-2">
+        <div class="single-brand">
+         <img alt="img" src="{% static 'img/brand/b-logo5.png' %}"/>
+        </div>
+       </div>
+       <div class="col-xl-2">
+        <div class="single-brand">
+         <img alt="img" src="{% static 'img/brand/b-logo6.png' %}"/>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- brand-area-end -->
+   </main>
+   
+{% endblock %}

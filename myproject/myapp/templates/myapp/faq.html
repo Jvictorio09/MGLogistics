@@ -1,0 +1,201 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Faq{% endblock %}
+{% block content %}
+<main>
+            
+    <!-- search-popup -->
+<div class="modal fade bs-example-modal-lg search-bg popup1" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content search-popup">
+            <div class="text-center">
+                <a href="#" class="close2" data-dismiss="modal" aria-label="Close">× close</a>
+            </div>
+            <div class="row search-outer">
+                <div class="col-md-11"><input type="text" placeholder="Search for products..." /></div>
+                <div class="col-md-1 text-right"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /search-popup -->
+   <!-- breadcrumb-area -->
+    <section class="breadcrumb-area d-flex align-items-center" style="background-image:url('{% static 'img/testimonial/test-bg.png' %}')">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="breadcrumb-wrap text-left">
+                        <div class="breadcrumb-title">
+                            <h2>Faq</h2>    
+                            <div class="breadcrumb-wrap">
+                      
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Faq</li>
+                            </ol>
+                        </nav>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb-area-end -->
+     <!-- team-area -->
+    <!-- team-area -->
+<section id="faq" class="faq-area pt-120 pb-120">
+    <div class="container">
+      <div class="row">
+        <!-- Column 1 -->
+        <div class="col-lg-6 col-md-6">
+          <div class="faq-wrap">
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="faq-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseOne"
+                      aria-expanded="false" aria-controls="collapseOne">
+                      What areas do you serve for delivery?
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    We serve Metro Manila and nearby provinces including Rizal, Cavite, Laguna, Bulacan, and Batangas. For long-distance hauling, contact us for availability and rates.
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="faq-btn" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                      aria-expanded="true" aria-controls="collapseTwo">
+                      Do you offer same-day or rush delivery?
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Yes, we offer same-day and rush trucking services for urgent deliveries depending on truck availability. It's best to contact us early for priority booking.
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="faq-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                      aria-expanded="false" aria-controls="collapseThree">
+                      What type of cargo do you accept?
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    We handle dry goods, equipment, appliances, palletized cargo, and fragile items. For specialized or sensitive freight, let us know in advance so we can prep the proper handling.
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h2 class="mb-0">
+                    <button class="faq-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+                      aria-expanded="false" aria-controls="collapseFour">
+                      Do you provide cargo insurance?
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Yes. Insurance is optional but highly recommended for high-value shipments. We can facilitate coverage based on the declared value of your cargo.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Column 2 -->
+        <div class="col-lg-6 col-md-6">
+          <div class="faq-wrap">
+            <div class="accordion" id="accordionExample1">
+              <div class="card">
+                <div class="card-header" id="headingFive">
+                  <h2 class="mb-0">
+                    <button class="faq-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
+                      aria-expanded="false" aria-controls="collapseFive">
+                      How do I book a service?
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample1">
+                  <div class="card-body">
+                    You can book through our website, message us on our social channels, or call/text our hotline. A representative will assist you in confirming truck type, location, and rates.
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card">
+                <div class="card-header" id="headingSix">
+                  <h2 class="mb-0">
+                    <button class="faq-btn" type="button" data-toggle="collapse" data-target="#collapseSix"
+                      aria-expanded="true" aria-controls="collapseSix">
+                      Can you assist with customs clearance for imported goods?
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseSix" class="collapse show" aria-labelledby="headingSix" data-parent="#accordionExample1">
+                  <div class="card-body">
+                    Absolutely. We have an experienced team who handles customs documentation, clearance, and coordination to make sure your goods are compliant and cleared quickly.
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card">
+                <div class="card-header" id="headingSeven">
+                  <h2 class="mb-0">
+                    <button class="faq-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven"
+                      aria-expanded="false" aria-controls="collapseSeven">
+                      Do you offer warehousing or temporary storage?
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample1">
+                  <div class="card-body">
+                    Yes, we offer secure warehouse storage for both short-term and long-term needs. Perfect for businesses needing a distribution hub or buffer stock storage.
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card">
+                <div class="card-header" id="headingEight">
+                  <h2 class="mb-0">
+                    <button class="faq-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseEight"
+                      aria-expanded="false" aria-controls="collapseEight">
+                      What are your operating hours?
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample1">
+                  <div class="card-body">
+                    We operate Monday to Saturday, 8:00 AM to 6:00 PM. For urgent or off-hour logistics, we offer extended support by request.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  
+ 
+</main>
+{% endblock %}

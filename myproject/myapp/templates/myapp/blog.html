@@ -1,0 +1,154 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Blog{% endblock %}
+{% block content %}
+
+<main>
+    <!-- search-popup -->
+    <div class="modal fade bs-example-modal-lg search-bg popup1" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content search-popup">
+                <div class="text-center">
+                    <a aria-label="Close" class="close2" data-dismiss="modal" href="#">× close</a>
+                </div>
+                <div class="row search-outer">
+                    <div class="col-md-11">
+                        <input placeholder="Search for products..." type="text" />
+                    </div>
+                    <div class="col-md-1 text-right">
+                        <a href="#">
+                            <i aria-hidden="true" class="fa fa-search"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /search-popup -->
+
+    <!-- breadcrumb-area -->
+    <section class="breadcrumb-area d-flex align-items-center" style="background-image:url('{% static 'img/testimonial/test-bg.png' %}')">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="breadcrumb-wrap text-left">
+                        <div class="breadcrumb-title">
+                            <h2>Blog</h2>
+                            <div class="breadcrumb-wrap">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                                        <li aria-current="page" class="breadcrumb-item active">Blog</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb-area-end -->
+
+    <!-- inner-blog -->
+    <section class="inner-blog pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    {% for post in blogs %}
+                    <div class="bsingle__post mb-50">
+                        <div class="bsingle__post-thumb">
+                            {% if post.image %}
+                            <img alt="{{ post.title }}" src="{{ post.image.url }}" />
+                            {% else %}
+                            <img alt="{{ post.title }}" src="{% static 'img/blog/inner_b1.jpg' %}" />
+                            {% endif %}
+                        </div>
+                        <div class="bsingle__content">
+                            <div class="admin">
+                                <a href="#">
+                                    <i class="far fa-user"></i> by {{ post.author }}
+                                </a>
+                            </div>
+                            <h2>
+                                <a href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a>
+                            </h2>
+                            <p>{{ post.content|truncatewords:30 }}</p>
+                            <div class="meta-info">
+                                <ul>
+                                    <li><i class="fal fa-eye"></i> {{ post.views }} Views</li>
+                                    <li><i class="fal fa-comments"></i> {{ post.comments }} Comments</li>
+                                    <li><i class="fal fa-calendar-alt"></i> {{ post.created_at|date:"F j, Y" }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <aside class="sidebar-widget">
+                        <section class="widget widget_search" id="search-3">
+                            <h2 class="widget-title">Search</h2>
+                            <form class="search-form" method="get" role="search">
+                                <label>
+                                    <input class="search-field" name="s" placeholder="Search …" type="search" value="" />
+                                </label>
+                                <input class="search-submit" type="submit" value="Search" />
+                            </form>
+                        </section>
+                        <section class="widget_text widget widget_custom_html">
+                            <h2 class="widget-title">Follow Us</h2>
+                            <div class="textwidget custom-html-widget">
+                                <div class="widget-social">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-wordpress"></i></a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="widget widget_categories">
+                            <h2 class="widget-title">Categories</h2>
+                            <ul>
+                                <li class="cat-item"><a href="#">Branding</a> (4)</li>
+                                <li class="cat-item"><a href="#">Corporate</a> (3)</li>
+                                <li class="cat-item"><a href="#">Design</a> (3)</li>
+                                <li class="cat-item"><a href="#">Gallery</a> (3)</li>
+                            </ul>
+                        </section>
+                        <section class="widget widget_recent_entries">
+                            <h2 class="widget-title">Recent Posts</h2>
+                            <ul>
+                                {% for post in blogs|slice:":3" %}
+                                <li>
+                                    <a href="{% url 'blog_detail' slug=post.slug %}">{{ post.title }}</a>
+                                    <span class="post-date">{{ post.created_at|date:"F j, Y" }}</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </section>
+                        <section class="widget widget_tag_cloud">
+                            <h2 class="widget-title">Tags</h2>
+                            <div class="tagcloud">
+                                <a href="#" class="tag-cloud-link">app</a>
+                                <a href="#" class="tag-cloud-link">branding</a>
+                                <a href="#" class="tag-cloud-link">corporate</a>
+                                <a href="#" class="tag-cloud-link">design</a>
+                                <a href="#" class="tag-cloud-link">gallery</a>
+                                <a href="#" class="tag-cloud-link">video</a>
+                                <a href="#" class="tag-cloud-link">web design</a>
+                            </div>
+                        </section>
+                    </aside>
+                </div>
+                <!-- Sidebar end -->
+            </div>
+        </div>
+    </section>
+    <!-- inner-blog-end -->
+</main>
+
+{% endblock %}

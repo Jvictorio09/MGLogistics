@@ -1,0 +1,307 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Team{% endblock %}
+{% block content %}
+{% load static %}
+
+<main>
+ <!-- search-popup -->
+ <div class="modal fade bs-example-modal-lg search-bg popup1" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-lg" role="document">
+   <div class="modal-content search-popup">
+    <div class="text-center">
+     <a aria-label="Close" class="close2" data-dismiss="modal" href="#">
+      × close
+     </a>
+    </div>
+    <div class="row search-outer">
+     <div class="col-md-11">
+      <input placeholder="Search for products..." type="text"/>
+     </div>
+     <div class="col-md-1 text-right">
+      <a href="#">
+       <i aria-hidden="true" class="fa fa-search">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <!-- /search-popup -->
+ <!-- breadcrumb-area -->
+ <section class="breadcrumb-area d-flex align-items-center" style="background-image:url('{% static 'img/testimonial/test-bg.png' %}')">
+  <div class="container">
+   <div class="row align-items-center">
+    <div class="col-xl-12 col-lg-12">
+     <div class="breadcrumb-wrap text-left">
+      <div class="breadcrumb-title">
+       <h2>
+        Team
+       </h2>
+       <div class="breadcrumb-wrap">
+        <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+           <a href="#">
+            Home
+           </a>
+          </li>
+          <li aria-current="page" class="breadcrumb-item active">
+           Pricing
+          </li>
+         </ol>
+        </nav>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
+ <!-- breadcrumb-area-end -->
+ <!-- team-area -->
+ <section class="team-area2 pt-120 pb-90" id="team">
+  <div class="container">
+   <div class="row">
+    <div class="col-lg-4 col-md-6">
+     <div class="flip-card mb-30">
+      <div class="flip-card-inner">
+       <div class="flip-card-front">
+        <img alt="img" src="{% static 'img/team/team_img01.png' %}"/>
+       </div>
+       <div class="flip-card-back">
+        <div class="mt-120">
+         <h4>
+          <a href="#">
+           Rosalina D. William
+          </a>
+         </h4>
+         <span>
+          Founder
+         </span>
+         <div class="social">
+          <a href="#">
+           <i class="fab fa-facebook-f">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-twitter">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-behance">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-youtube">
+           </i>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+     <div class="flip-card mb-30">
+      <div class="flip-card-inner">
+       <div class="flip-card-front">
+        <img alt="img" src="{% static 'img/team/team_img02.png' %}"/>
+       </div>
+       <div class="flip-card-back">
+        <div class="mt-120">
+         <h4>
+          <a href="#">
+           Alina Roboto  William
+          </a>
+         </h4>
+         <span>
+          CEO
+         </span>
+         <div class="social">
+          <a href="#">
+           <i class="fab fa-facebook-f">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-twitter">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-behance">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-youtube">
+           </i>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+     <div class="flip-card mb-30">
+      <div class="flip-card-inner">
+       <div class="flip-card-front">
+        <img alt="img" src="{% static 'img/team/team_img03.png' %}"/>
+       </div>
+       <div class="flip-card-back">
+        <div class="mt-120">
+         <h4>
+          <a href="#">
+           Rock Alane
+          </a>
+         </h4>
+         <span>
+          Developer
+         </span>
+         <div class="social">
+          <a href="#">
+           <i class="fab fa-facebook-f">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-twitter">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-behance">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-youtube">
+           </i>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+     <div class="flip-card mb-30">
+      <div class="flip-card-inner">
+       <div class="flip-card-front">
+        <img alt="img" src="{% static 'img/team/team_img04.png' %}"/>
+       </div>
+       <div class="flip-card-back">
+        <div class="mt-120">
+         <h4>
+          <a href="#">
+           Rosalina D. William
+          </a>
+         </h4>
+         <span>
+          Founder
+         </span>
+         <div class="social">
+          <a href="#">
+           <i class="fab fa-facebook-f">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-twitter">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-behance">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-youtube">
+           </i>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+     <div class="flip-card mb-30">
+      <div class="flip-card-inner">
+       <div class="flip-card-front">
+        <img alt="img" src="{% static 'img/team/team_img08.png' %}"/>
+       </div>
+       <div class="flip-card-back">
+        <div class="mt-120">
+         <h4>
+          <a href="#">
+           Alina Roboto  William
+          </a>
+         </h4>
+         <span>
+          CEO
+         </span>
+         <div class="social">
+          <a href="#">
+           <i class="fab fa-facebook-f">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-twitter">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-behance">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-youtube">
+           </i>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+     <div class="flip-card mb-30">
+      <div class="flip-card-inner">
+       <div class="flip-card-front">
+        <img alt="img" src="{% static 'img/team/team_img07.png' %}"/>
+       </div>
+       <div class="flip-card-back">
+        <div class="mt-120">
+         <h4>
+          <a href="#">
+           Rock Alane
+          </a>
+         </h4>
+         <span>
+          Developer
+         </span>
+         <div class="social">
+          <a href="#">
+           <i class="fab fa-facebook-f">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-twitter">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-behance">
+           </i>
+          </a>
+          <a href="#">
+           <i class="fab fa-youtube">
+           </i>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
+ <!-- team-area-end -->
+</main>
+
+{% endblock %}

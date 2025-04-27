@@ -1,0 +1,105 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}{{ service.title }} - Service Detail{% endblock %}
+{% block content %}
+
+<main>
+  <!-- ... breadcrumb-area ... -->
+  <section class="breadcrumb-area d-flex align-items-center" style="background-image:url('{% static 'img/testimonial/test-bg.png' %}')">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-12 col-lg-12">
+          <div class="breadcrumb-wrap text-left">
+            <div class="breadcrumb-title">
+              <h2>{{ service.title }}</h2>
+              <div class="breadcrumb-wrap">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Service Details</li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- service-details-area -->
+  <div class="about-area5 about-p pt-120 pb-90 p-relative">
+    <div class="container">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-sm-12 col-md-12 col-lg-4 order-1">
+          <aside class="sidebar services-sidebar">
+            <div class="sidebar-widget categories">
+              <div class="widget-content">
+                <ul class="services-categories">
+                  {% for s in all_services %}
+                  <li class="{% if s.slug == service.slug %}active{% endif %}">
+                    <a href="{% url 'service_detail' slug=s.slug %}">{{ s.title }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+
+            {% if service.brochure_1 or service.brochure_2 %}
+            <div class="brochures-box">
+              <div class="inner">
+                <h4>Download Brochures</h4>
+                <div class="text">Get more info about this service in PDF format.</div>
+                {% if service.brochure_1 %}
+                <a class="theme-btn btn-style-one" href="{{ service.brochure_1.url }}" target="_blank">
+                  <span class="btn-title"><i class="fa fa-file-pdf"></i> Info Company</span>
+                </a>
+                {% endif %}
+                {% if service.brochure_2 %}
+                <a class="theme-btn btn-style-one" href="{{ service.brochure_2.url }}" target="_blank">
+                  <span class="btn-title"><i class="fa fa-file-pdf"></i> Brochure Newest</span>
+                </a>
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+          </aside>
+        </div>
+
+        <!-- Main content -->
+        <div class="col-lg-8 col-md-12 col-sm-12 order-2">
+          <div class="service-detail">
+            <div class="content-box">
+              <h2>{{ service.title }}</h2>
+              <p>{{ service.description }}</p>
+
+              <div class="two-column">
+                <div class="row">
+                  <div class="image-column col-xl-6 col-lg-12 col-md-12">
+                    <figure class="image">
+                      <img alt="{{ service.title }}" src="{{ service.image.url }}" />
+                    </figure>
+                  </div>
+                  <div class="text-column col-xl-6 col-lg-12 col-md-12">
+                    <p>{{ service.extra_info }}</p>
+                    <ul class="list-style-one">
+                      {% for bullet in service.get_bullet_list %}
+                      <li>{{ bullet }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h3>Why Choose This Service</h3>
+              <p>{{ service.extra_info }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
