@@ -59,3 +59,43 @@ def blog_detail(request, slug):
 
 def contact(request):
     return render(request, 'myapp/contact.html')
+
+
+from django.core.mail import send_mail
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.contrib import messages
+
+def send_quote(request):
+    if request.method == 'POST':
+        first = request.POST.get('firstn')
+        last = request.POST.get('lastn')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+
+        full_message = f"""
+        New Quote Request:
+
+        Name: {first} {last}
+        Email: {email}
+        Phone: {phone}
+        Subject: {subject}
+
+        Message:
+        {message}
+        """
+
+        send_mail(
+            subject=f"Quote Request: {subject}",
+            message=full_message,
+            from_email='juliavictorio16@gmail.com',
+            recipient_list=['juliavictorio16@gmail.com'],
+            fail_silently=False,
+        )
+
+        messages.success(request, "Quote sent successfully!")
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+    return HttpResponseRedirect('/')
