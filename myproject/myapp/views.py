@@ -1,7 +1,9 @@
 from django.shortcuts import render
 
+
 def home(request):
-    return render(request, 'myapp/index.html')
+    services = Service.objects.filter(is_active=True)
+    return render(request, 'myapp/index.html', {'services': services})
 
 def home_alt(request):
     return render(request, 'myapp/home_alt.html')
