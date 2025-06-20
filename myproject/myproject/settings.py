@@ -32,6 +32,7 @@ ALLOWED_HOSTS = [
     'localhost',
     'mglogistics-production.up.railway.app',
     'www.malcolmgloballogistics.com',
+    'malcolmgloballogistics.com',
 ]
 
 
