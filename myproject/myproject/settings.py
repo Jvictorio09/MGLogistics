@@ -31,11 +31,13 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     'mglogistics-production.up.railway.app',
+    'www.malcolmgloballogistics.com',
 ]
 
 
 CSRF_TRUSTED_ORIGINS = [
     "https://mglogistics-production.up.railway.app",
+    "https://www.malcolmgloballogistics.com/",
 ]
 
 
